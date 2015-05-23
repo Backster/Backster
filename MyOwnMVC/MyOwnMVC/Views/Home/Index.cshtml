@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    @model MyOwnMVC.Models.Auth
+}
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="col-md-12">
+        <h2>Login<small> This part of Bootstrap Grid will contain login.</small></h2><br />
+    </div>
+    <div class="clearfix"></div>
+        @using (Html.BeginForm("Test1", "Testarea", FormMethod.Post))
+        {
+            <div class="col-md-3">
+                <div class="form-login">
+                    <h4>Please login here</h4>
+                    <input type="text" name="Fn" class="form-control input-sm chat-input" placeholder="username" />
+                    <br />
+                    <input type="text" name="Pw" class="form-control input-sm chat-input" placeholder="password" />
+                    <br />
+                    <div class="wrapper">
+                        <span class="group-btn">
+                            <input type="submit" value="Login" class="btn btn-primary btn-md" />
+                            
+                        </span>
+                    </div>
+                </div>
+
+            </div> 
+        }
+        <div class="clearfix"></div>
+        <div class="col-md-12">
+            <h2>Database<small> This part of Bootstrap Grid will contain database test.</small></h2><br />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-4">
+            
+                <input type="submit" value="Red Data" class="btn-danger btn" id="show-red" />
+            
+            
+                <input type="submit" value="Yellow Data" class="btn-warning btn" id="show-yellow" />
+           
+            
+                <input type="submit" value="Green Data" class="btn-success btn" id="show-green" />
+            
+            
+                <input type="submit" value="Blue Data" class="btn-primary btn" id="show-blue" />
+
+         <div class="clearfix"></div>
+            <br />
+                <div id="red-alert" class="alert alert-danger hidden" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <strong>Now displaying:</strong> Red Data
+                </div>
+            <div id="yellow-alert" class="alert alert-warning hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <strong>Now displaying:</strong> Yellow Data
+            </div>
+            <div id="green-alert" class="alert alert-success hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <strong>Now displaying:</strong> Green Data
+            </div>
+            <div id="blue-alert" class="alert alert-info hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <strong>Now displaying:</strong> Blue Data
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12">
+            <h2>Other stuff<small> This part of Bootstrap Grid will contain different things!</small></h2><br />
+        </div>
+    <div class="clearfix"></div>
+        <br />
+    <div class="col-md-3">
+        <input type="submit" value="XML DATA!" class="btn-default btn" />
+    </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="~/Scripts/Custom.js"></script>
+</body>
+</html>
+
+

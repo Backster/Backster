@@ -1,0 +1,28 @@
+﻿@model MyOwnMVC.Models.Auth
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>My site</title>
+    
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <p class="navbar-text"><a href="#" class="navbar-link"></a>     
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Backster</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href=@Url.Action("Index", "Home")>Home</a></li>
+                    <li><a href=@Url.Action("ViewInfo", "Information")>About me</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @RenderBody()
+</body>
+</html>
